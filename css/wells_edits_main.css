@@ -1,0 +1,59 @@
+/*Body*/
+
+.body_fonts {
+    font-family: 'Crimson Pro', serif;
+}
+
+
+/*Nav*/
+
+.navbar a {
+    font-family: 'roboto slab', sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+
+/*headers*/
+
+h1 {
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+h2 {
+    text-transform: uppercase;
+}
+
+.img-resp {
+    max-width: 100%;
+    height: auto;
+}
+
+
+/*.job .card-body {
+    padding: 0px ;
+
+}*/
+
+.container {
+    margin-top: 5em;
+}
+
+
+/* cards */
+
+
+/*.cardgen {
+    
+}*/
+
+
+/* Large devices (desktops, 992px and down) */
+
+@media (max-width: 992px) {}
+
+.container {
+    margin-top: 12em;
+}

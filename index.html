@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Mock Miami Job Website</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link href="css/jquery.multiselect.css" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="js/jobcard.js"></script>
+    <script type="text/javascript" src="js/jobcardgen.js"></script>
+</head>
+
+<body class="main body_fonts backimg">
+
+    <!-- Nav -->
+    <nav class="navbar navbar-expand-lg fixed-top ">
+        <a class="navbar-brand" href="#"><img style="width:100%;" src="images/mobile-logo.png"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"><i class="fa fa-bars"></i></span>
+        </button>
+        <div class="collapse navbar-collapse " id="navbarSupportedContent">
+            <ul class="navbar-nav mr-4">
+                <li class="nav-item">
+                    <a class="nav-link " data-value="aims" href="#">AIMS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " data-value="jobs" href="#">Jobs</a> </li>
+                <li class="nav-item">
+                    <a class="nav-link " data-value="admin" href="#">Admin</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " data-value="contact" href="#">Contact</a> </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="overlay"></div>
+    <!-- Search Parameters -->
+    <div class="search" id="search">
+        <div class="container">
+            <div class="row align-items-center justify-content-center">
+
+                <!--=============================================================-->
+                <!--===========          featured job           =================-->
+                <!--=============================================================-->
+
+                <div class="col-xs-12 col-sm-6 col-lg-8 align-items-center justify-content-center">
+                    <div class="mb-5 text-center featjob">
+                        <h1>Featured Job</h1>
+                    </div>
+                    <div class="card">
+                        <div class="row card-body">
+                            <div class="col-sm-6">
+                                <h4 class="card-title">Job Title</h4>
+                                <h5>Company Name</h5>
+                                <h5>Job Type</h5>
+                                <h5>Location</h5>
+                            </div>
+                            <div class="col-sm-6 text-right">
+                                <img src="images/miamim.jpg" class="img-fluid featured">
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
+                                            Click To Apply
+                                          </button>
+                            <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalLongTitle">Job Category</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <h2>Job Title</h2>
+                                            <h4>Company Name</h4>
+                                            <h5>Job Type</h5>
+                                            <h5>Location</h5>
+                                            <br>
+                                            <h6>Job Description:</h6>
+
+                                            <p>[Enter Text Here]
+                                            </p>
+                                            <br>
+                                            <h5>How to Apply:</h5>
+
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                            <!--<button onclick="s.showSettingsDialog()">Share</button>-->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--=============================================================-->
+                <!--=============          Job Search           =================-->
+                <!--=============================================================-->
+                <div class="col-xs-6 col-lg-4">
+                    <div class="mb-5 text-center jobsearch">
+                        <h1 class="font-weight-bold">Job Search</h1>
+                    </div>
+                    <form method="post" class="search-jobs-form">
+                        <div class="row mb-4">
+                            <div class="col-12">
+                                <input type="text" class="form-control form-control" placeholder="Job title, keywords...">
+                            </div>
+                        </div>
+                        <div class="row mb-4">
+                            <div class="col-12">
+                                <select name="jobType[]" multiple id="jobType" class="form-control">
+                                    <option value="Full Time">Full Time</option>
+                                    <option value="Part Time">Part Time</option>
+                                    <option value="Contract">Contract</option>
+                                    <option value="Co-Op">Co-Op</option>
+                                    <option value="Internship">Internship</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row mb-4">
+                            <div class="col-12">
+                                <select name="jobCat[]" multiple id="jobCat" class="form-control">
+                                    <option value="Graphic Design">Graphic Design</option>
+                                    <option value="Web Design">Web Design</option>
+                                    <option value="Game Design">Game Design</option>
+                                    <option value="UI/UX Design">UI/UX Design</option>
+                                    <option value="AR/VR">AR/VR</option>
+                                    <option value="Entrepeneurship">Business Development</option>
+                                    <option value="Animation">Animation</option>
+                                    <option value="3D Modeling">3D Modeling</option>
+                                    <option value="Product Management">Product Management</option>
+                                    <option value="Project Management">Project Management</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row mb-4">
+                            <div class="col-12">
+                                <button type="submit" class="btn btn-primary btn-block btn-search"><span class="icon-search icon mr-2"></span>Search Job</button>
+                            </div>
+                        </div>
+                </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- Main -->
+
+
+    <div class="job" id="job">
+
+        <div class="container">
+            <h1 class="text-center">Jobs</h1>
+
+            <div class="row">
+
+
+                <!--=============================================================-->
+                <!--============          Job Cards 1           =================-->
+                <!--=============================================================-->
+
+                <div class="cardgen"></div>
+
+
+
+
+                <!-- Footer -->
+                <footer class="page-footer fixed-bottom font-small">
+
+                    <div class="footer-copyright text-center py-3">© 2019 Copyright:
+                        <p>Contact AIMS Department With Any Issues</p>
+                    </div>
+
+                </footer>
+
+                <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+                <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+                <script type="text/javascript" src='js/script.js'></script>
+                <script src="js/jquery.multiselect.js"></script>
+                <script>
+                    $('#jobType').multiselect({
+                        columns: 1,
+                        placeholder: 'Select Job Type'
+                    });
+                </script>
+                <script>
+                    $('#jobCat').multiselect({
+                        columns: 1,
+                        placeholder: 'Select Job Category'
+                    });
+                </script>
+
+
+</body>
+
+
+</html>
